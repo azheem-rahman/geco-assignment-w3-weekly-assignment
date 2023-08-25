@@ -7,7 +7,7 @@ const Grocery = (props) => {
     <div>
       {groceryData.map((item) => {
         return (
-          <ul>
+          <ul key={item.id}>
             <li>Name: {item.name}</li>
             <li>Category: {item.category}</li>
             <li>Price: ${item.price}</li>
