@@ -19,7 +19,7 @@ const Employee = (props) => {
         return (
           <div key={employee.id}>
             <img src={employee.img} alt="employee-photo" />
-            <div style={{ border: "solid 1px black", width: "20%" }}>
+            <div style={{ backgroundColor: "yellow", width: "20%" }}>
               <p
                 id={employee.id}
                 onMouseOver={handleHover}
