@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 
 class Car extends Component {
   render() {
@@ -16,5 +17,14 @@ class Car extends Component {
     );
   }
 }
+
+// Prop Validation
+Car.propTypes = {
+  make: PropTypes.string,
+  model: PropTypes.string,
+  year: PropTypes.number,
+  color: PropTypes.string,
+  mileage: PropTypes.number,
+};
 
 export default Car;

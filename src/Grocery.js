@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const Grocery = (props) => {
   const { groceryData } = props;
@@ -17,6 +18,15 @@ const Grocery = (props) => {
       })}
     </div>
   );
+};
+
+// Prop Validation
+Grocery.propTypes = {
+  id: PropTypes.number,
+  name: PropTypes.string,
+  category: PropTypes.string,
+  price: PropTypes.number,
+  quantity: PropTypes.number,
 };
 
 export default Grocery;

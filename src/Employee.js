@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const Employee = (props) => {
   const { employeeData } = props;
@@ -15,7 +16,7 @@ const Employee = (props) => {
 
   return (
     <div>
-      {employeeData.employees.map((employee) => {
+      {employeeData.map((employee) => {
         return (
           <div key={employee.id}>
             <img src={employee.img} alt="employee-photo" />
@@ -34,6 +35,17 @@ const Employee = (props) => {
       })}
     </div>
   );
+};
+
+// Prop Validation
+Employee.propTypes = {
+  id: PropTypes.number,
+  fullName: PropTypes.string,
+  age: PropTypes.number,
+  salary: PropTypes.number,
+  designation: PropTypes.string,
+  img: PropTypes.string,
+  dept: PropTypes.string,
 };
 
 export default Employee;

@@ -25,7 +25,7 @@ class App extends Component {
         <h2>Employee Data</h2>
         <section>
           <div style={{ border: "solid 1px black" }}>
-            <Employee employeeData={employeeData} />
+            <Employee employeeData={employeeData.employees} />
           </div>
         </section>
 
